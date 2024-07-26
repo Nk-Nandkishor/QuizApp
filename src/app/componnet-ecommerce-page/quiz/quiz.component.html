@@ -1,0 +1,75 @@
+<p>quiz works!</p>
+<div class="main-container">
+  <div class="start-container" *ngIf="isStart == true">
+    <div class="btn-wrraper">
+      <button class="btn" (click)="showingWarning()">Start Quiz</button>
+    </div>
+  </div>
+
+  <div class="conditon-container" [ngClass]="showWaring ? 'isActivated' : ''">
+    <div class="warnings">
+      <p>
+        This Test Have <span>5 </span> Quistions No nagative makring and each
+        quistion You have <span> 15 </span> seconds
+      </p>
+    </div>
+    <div class="start-quiz-con">
+      <button class="start-buttun" (click)="quizQustionShowing()">
+        Continue
+      </button>
+    </div>
+  </div>
+  <div class="quistion-section" [ngClass]="quizQuestion ? 'isActivated' : ''">
+    <div class="haeder">
+      <span>Awesome Quiz Web Application</span>
+      <span class="timer-title"
+        >Time Off : <button class="timer">{{ counter }}</button></span
+      >
+    </div>
+    <div class="qustion-box">
+      <div class="option">
+        <span class="option" 
+          >{{ currentQuestion + 1 }}. {{ quistionList[currentQuestion].question }}</span
+        >
+      </div>
+      <div *ngFor="let option of quistionList[currentQuestion].options">
+        <div
+          class="options"
+          (click)="selected(option)"
+          [ngClass]="{
+            disabled: selection(quistionList[currentQuestion].options),
+            correct: option.isSelected && option.isCorrect,
+            'in-correct': option.isSelected && !option.isCorrect
+          }"
+        >
+          <span>{{ option.answer }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="start-quiz-con btn-align align-items-space-between">
+      <button
+        *ngIf="currentQuestion + 1 == quistionList.length"
+        class="start-buttun"
+        (click)="Finish()"
+      >
+        Finish
+      </button>
+      <button
+        class="start-buttun"
+        *ngIf="currentQuestion + 1 != quistionList.length"
+        (click)="next()"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+
+  <div class="result-box" [ngClass]="questionEnd ? 'isActivated' : ''">
+    <h3>This is your result of this test</h3>
+    <div class="result">
+      <span>Your attempt is {{ questionCount }}/{{ quistionList.length }}</span>
+    </div>
+    <h2>Thanks for test</h2>
+  </div>
+</div>

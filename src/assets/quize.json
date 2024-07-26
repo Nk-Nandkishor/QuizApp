@@ -1,0 +1,92 @@
+[
+    {
+        "quistionId":1,
+        "qustion":"Which are the sentence correct about Typescript",
+        "options":[
+           {
+             "answer":"Typescript based on Javascript",
+             "isCorrect":false
+           },
+           {
+            "answer":"Angular based on Typescript ",
+            "isCorrect":false
+          },
+          {
+            "answer":"Typescript maintaine by microsoft",
+            "isCorrect":false
+          },
+          {
+            "answer":"All of the above",
+            "isCorrect":true
+          }
+
+        ]
+    },    {
+        "quistionId":2,
+        "qustion":"What is The AOT Stand For",
+        "options":[
+           {
+             "answer":"Typescript based on Javascript",
+             "isCorrect":false
+           },
+           {
+            "answer":"Angular based on Typescript ",
+            "isCorrect":false
+          },
+          {
+            "answer":"Typescript maintaine by microsoft",
+            "isCorrect":false
+          },
+          {
+            "answer":"All of the above",
+            "isCorrect":true
+          }
+
+        ]
+    },    {
+        "quistionId":3,
+        "qustion":"Which one is not a lifecycle hook",
+        "options":[
+           {
+             "answer":"Typescript based on Javascript",
+             "isCorrect":false
+           },
+           {
+            "answer":"Angular based on Typescript ",
+            "isCorrect":false
+          },
+          {
+            "answer":"Typescript maintaine by microsoft",
+            "isCorrect":false
+          },
+          {
+            "answer":"All of the above",
+            "isCorrect":true
+          }
+
+        ]
+    },    {
+        "quistionId":4,
+        "qustion":"What is Angular ",
+        "options":[
+           {
+             "answer":"Typescript based on Javascript",
+             "isCorrect":false
+           },
+           {
+            "answer":"Angular based on Typescript ",
+            "isCorrect":false
+          },
+          {
+            "answer":"Typescript maintaine by microsoft",
+            "isCorrect":false
+          },
+          {
+            "answer":"All of the above",
+            "isCorrect":true
+          }
+
+        ]
+    }
+   
+]
